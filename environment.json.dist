@@ -1,0 +1,24 @@
+{
+  "credentials" : {
+    "sysadmin" : {
+      "username" : "",
+      "password" : ""
+    },
+    "standardUser" : {
+      "username" : "",
+      "password" : ""
+    }
+  },
+  "url": "https://login.salesforce.com",
+    "timeout": {
+      "explicit" : 30000
+    },
+    "browserstack": {
+        "user": "",
+        "key": "",
+        "os": "Windows",
+        "os_version": "10",
+        "browser": "Edge",
+        "browser_version": "18.0"
+      }
+}
