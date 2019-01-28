@@ -1,10 +1,11 @@
 const commonActions = require('../core/CommonActions');
+const ConfigurationTree = require('configurationtree.po');
 
 class Header {
 
     constructor() {
-        this.configurationButton = 'div[data-interactive-uid="3"]'; // It is Configuration's locator (Gear icon).
         this.applicationConfigurationOption = '#related_setup_app_home';  //It is the locator of Application Configuration option into Configuration menu.
+        this.configurationButton = '.slds-icon-utility-setup'; // It is Configuration's locator (Gear icon).
         commonActions.waitForVisible('.slds-global-header'); // It is Header bar locator.
         commonActions.waitForVisible('.branding-userProfile-button'); //It is the locator of profile icon.
     }
@@ -21,11 +22,8 @@ class Header {
     displayConfigurationTree() {
         this.clickConfigurationsButton();
         this.clickApplicationConfiguration();
+        return new ConfigurationTree();
     }
-    /*clickAppLauncherButton()  {
-        commonActions.click(this.appLaucherButton);
-        //return new AppLauncherModal();
-    }*/
 }
 
 module.exports = Header;
