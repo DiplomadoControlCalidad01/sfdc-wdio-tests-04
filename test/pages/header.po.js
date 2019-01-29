@@ -22,8 +22,6 @@ class Header {
     displayConfigurationTree() {
         this.clickConfigurationsButton();
         this.clickApplicationConfiguration();
-        //browser.pause(30000);
-
         return new ConfigurationTree();
     }
 }

@@ -7,7 +7,8 @@ describe('New Type of Territory feature', () => {
         let header = Login.loginAs(credentials.sysadmin.username,
             credentials.sysadmin.password);
         let tree =header.displayConfigurationTree();
-        tree.setSearchTextField("Territorios");
+        tree.setSearchTextField("Tipos de territorios");
+        tree.clickTerritoryTypeTreeBranch();
         browser.pause(30000);
     });
 });
