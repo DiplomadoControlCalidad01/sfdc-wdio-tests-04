@@ -1,5 +1,5 @@
 const commonActions = require('../core/CommonActions');
-const ConfigurationTree = require('configurationtree.po');
+const ConfigurationTree = require('../pages/configurationtree.po');
 
 class Header {
 
@@ -22,6 +22,8 @@ class Header {
     displayConfigurationTree() {
         this.clickConfigurationsButton();
         this.clickApplicationConfiguration();
+        //browser.pause(30000);
+
         return new ConfigurationTree();
     }
 }
