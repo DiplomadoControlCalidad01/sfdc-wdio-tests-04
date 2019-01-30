@@ -4,10 +4,10 @@ const commonActions = require('../core/CommonActions');
 class NewTerritoryType {
 
     constructor() {
-        this.labelTextField = '';
-        this.territoryTypeNameTextField = '';
-        this.descriptionTextField = '';
-        this.priorityTextField = '';
+        this.labelTextField = '#MasterLabel';
+        this.territoryTypeNameTextField = '#DeveloperName';
+        this.descriptionTextField = '#Description';
+        this.priorityTextField = '#Priority';
         this.saveButton = 'input[tabindex="5"]'; //locator of Save button.
     }
 
