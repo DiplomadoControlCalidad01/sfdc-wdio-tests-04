@@ -1,6 +1,7 @@
 const {url} = require ('../../environment');
 const commonActions = require('../core/CommonActions');
 const Header = require('../pages/header.po');
+const ConfigurationTree = require('../pages/configurationtree.po');
 
 class Login{
 
@@ -30,7 +31,8 @@ class Login{
         login.setUserNameTextField(username);
         login.setUserPasswordTextFiled(password);
         login.clickLoginButton();
-        return new Header;
+        //return new Header;
+        return new ConfigurationTree;
     }
 }
 
