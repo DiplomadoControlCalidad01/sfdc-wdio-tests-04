@@ -8,7 +8,7 @@ class NewTerritoryType {
         this.territoryTypeNameTextField = '#DeveloperName';
         this.descriptionTextField = '#Description';
         this.priorityTextField = '#Priority';
-        this.saveButton = 'input[tabindex="5"]'; //locator of Save button.
+        this.saveButton = '.pbHeader #topButtonRow input[name=\'save\']'; //locator of Save button.
     }
 
     setLabelTextField(label) {

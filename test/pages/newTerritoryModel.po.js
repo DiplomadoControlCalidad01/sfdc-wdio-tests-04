@@ -6,7 +6,7 @@ class NewTerritoryModel {
         this.labelTextField = '#Name';
         this.territoryModelNameTextField = '#DeveloperName';
         this.descriptionTextField = '#Description';
-        this.saveButton = 'input[tabindex="4"]';
+        this.saveButton = '.pbHeader #topButtonRow input[name=\'save\']';
     }
 
     setLabelTextField(label){

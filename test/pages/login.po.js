@@ -1,7 +1,7 @@
 const {url} = require ('../../environment');
 const commonActions = require('../core/CommonActions');
 const Header = require('../pages/header.po');
-const ConfigurationTree = require('../pages/configurationtree.po');
+const ConfigurationTree = require('./configurationTree.po');
 
 class Login{
 

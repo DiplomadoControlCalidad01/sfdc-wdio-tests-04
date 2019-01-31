@@ -1,5 +1,5 @@
 const commonActions = require('../core/CommonActions');
-const ConfigurationTree = require('../pages/configurationtree.po');
+const ConfigurationTree = require('./configurationTree.po');
 
 class Header {
 
