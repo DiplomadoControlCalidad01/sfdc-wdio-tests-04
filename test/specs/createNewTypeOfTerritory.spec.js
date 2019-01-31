@@ -3,6 +3,10 @@ const Login = require('../pages/login.po');
 
 describe('New Type of Territory feature', () => {
 
+    before(() => {
+
+    });
+
     it('Create New Type of Territory', () => {
         let configurationTree = Login.loginAs(credentials.sysadmin.username,
             credentials.sysadmin.password);
@@ -11,4 +15,5 @@ describe('New Type of Territory feature', () => {
         configurationTree.clickTerritoryTypeTreeBranch();
         browser.pause(30000);
     });
+
 });
