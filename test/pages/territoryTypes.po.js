@@ -8,18 +8,12 @@ class TerritoryTypes {
     }
 
     clickNewTerritoryTypeButton() {
-        /*browser.waitForExist('//iframe[contains(@id, "vfFrameId_")]');
-        let my_frame = browser.element('//iframe[contains(@id, "vfFrameId_")]').value;
-        browser.frame(my_frame);*/
         commonActions.switchToFrame('//iframe[contains(@id, "vfFrameId_")]');
         commonActions.click(this.newTerritoryTypeButton);
         return new NewTerritoryType;
     }
 
     getTerritoryType(territoryType) {
-        /*browser.waitForExist('//iframe[contains(@id, "vfFrameId_")]');
-        let my_frame = browser.element('//iframe[contains(@id, "vfFrameId_")]').value;
-        browser.frame(my_frame);*/
         commonActions.switchToFrame('//iframe[contains(@id, "vfFrameId_")]');
         return browser.isExisting('//a[contains(text(), "' + territoryType + '")]');
     }
