@@ -4,6 +4,9 @@ const commonActions = require('../core/CommonActions');
 class NewTerritoryType {
 
     constructor() {
+        browser.waitForExist('//iframe[contains(@id, "vfFrameId_")]');
+        let my_frame = browser.element('//iframe[contains(@id, "vfFrameId_")]').value;
+        browser.frame(my_frame);
         this.labelTextField = '#MasterLabel';
         this.territoryTypeNameTextField = '#DeveloperName';
         this.descriptionTextField = '#Description';
@@ -16,7 +19,7 @@ class NewTerritoryType {
     }
 
     setTerritoryTypeNameTextField(territoryTypeName) {
-        commonActions.setValue(this.territoryTypeNameTextField, territoryTypeName)
+        commonActions.setValue(this.territoryTypeNameTextField, territoryTypeName);
     }
 
     setDescriptionTextField(description) {

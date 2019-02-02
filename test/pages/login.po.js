@@ -31,7 +31,6 @@ class Login{
         login.setUserNameTextField(username);
         login.setUserPasswordTextFiled(password);
         login.clickLoginButton();
-        //return new Header;
         return new ConfigurationTree;
     }
 }

@@ -1,4 +1,5 @@
 const commonActions = require('../core/CommonActions');
+const TerritoryTypes = require('../pages/territoryTypes.po');
 
 class ConfigurationTree {
 
@@ -15,6 +16,7 @@ class ConfigurationTree {
     }
     clickTerritoryTypeTreeBranch() {
         commonActions.click(this.territoryTypeTreeBranch);
+        return new TerritoryTypes;
     }
 }
 
