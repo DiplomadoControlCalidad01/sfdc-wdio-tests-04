@@ -13,15 +13,19 @@ describe('New Type of Territory feature', () => {
         configurationTree.setSearchTextField("Tipos de territorios");
         let territoryTypes = configurationTree.clickTerritoryTypeTreeBranch();
         let newTerritoryTypeForm = territoryTypes.clickNewTerritoryTypeButton();
-        newTerritoryTypeForm.setTerritoryTypeNameTextField('Name1');
-        newTerritoryTypeForm.setLabelTextField('NewLabel1');
+        newTerritoryTypeForm.setTerritoryTypeNameTextField('Name2');
+        newTerritoryTypeForm.setLabelTextField('NewLabel2');
         newTerritoryTypeForm.setDescriptionTextField('Description of territory');
         newTerritoryTypeForm.setPriorityTextField('5');
         newTerritoryTypeForm.clickSaveButton();
         configurationTree.clickTerritoryTypeTreeBranch();
-        console.log(territoryTypes.getTerritoryType('Diplomado2222'));
+        console.log(territoryTypes.getTerritoryType('NewLabel2'));
 
         browser.pause(30000);
     });
 
 });
+
+
+
+//browser.alertDismiss(); alertAccept to accept the current alert for deleting.
