@@ -5,9 +5,6 @@ class NewTerritoryType {
 
     constructor() {
         commonActions.switchToFrame('//iframe[contains(@id, "vfFrameId_")]');
-        /*browser.waitForExist('//iframe[contains(@id, "vfFrameId_")]');
-        let my_frame = browser.element('//iframe[contains(@id, "vfFrameId_")]').value;
-        browser.frame(my_frame);*/
         this.labelTextField = '#MasterLabel';
         this.territoryTypeNameTextField = '#DeveloperName';
         this.descriptionTextField = '#Description';
@@ -29,6 +26,17 @@ class NewTerritoryType {
 
     setPriorityTextField(priority) {
         commonActions.setValue(this.priorityTextField, priority);
+    }
+
+    fillOutTheNewTerritoryTypeForm(newTerritoryTypeData) {
+        browser.pause(1000);
+        this.setTerritoryTypeNameTextField(newTerritoryTypeData.name);
+        browser.pause(1000);
+        this.setLabelTextField(newTerritoryTypeData.label);
+        browser.pause(1000);
+        this.setDescriptionTextField(newTerritoryTypeData.description);
+        browser.pause(1000);
+        this.setPriorityTextField(newTerritoryTypeData.priority);
     }
 
     clickSaveButton() {
