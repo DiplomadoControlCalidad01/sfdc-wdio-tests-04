@@ -1,5 +1,5 @@
 const commonActions = require('../core/CommonActions');
-const TerritoryTypes = require('../pages/territoryTypes.po');
+const TerritoryTypes = require('./territoryTypesList.po');
 
 class ConfigurationTree {
 

@@ -1,7 +1,7 @@
 
 const commonActions = require('../core/CommonActions');
 
-class NewTerritoryType {
+class NewTerritoryTypeForm {
 
     constructor() {
         commonActions.switchToFrame('//iframe[contains(@id, "vfFrameId_")]');
@@ -44,4 +44,4 @@ class NewTerritoryType {
     }
 }
 
-module.exports = NewTerritoryType;
+module.exports = NewTerritoryTypeForm;

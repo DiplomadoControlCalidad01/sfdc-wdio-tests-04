@@ -1,0 +1,19 @@
+
+const commonActions = require('../core/CommonActions');
+
+ class EditTerritoryTypesViewForm {
+
+     constructor() {
+         this.territoryTypeNameOption = 'td[class="selectCell"] #colselector_select_0 option[value="DeveloperName"]'; //locator of Territory Type Name option in the Available fields panel.
+         this.addButton = '#colselector .layout td[class="zen-phs buttonCell"] div[class="zen-mbs text"] .rightArrowIcon'; //locator related to button for the adding a column  to the Territory Types list view.
+         this.saveButton = '.pbHeader .pbButtonb input[class="btn primary"][name="save"]'; //The save button in the top menu related to save changes in the Territory Types list view.
+     }
+
+     addTerritoryTypeNameColumnToListView() {
+         commonActions.click(this.territoryTypeNameOption);
+         commonActions.click(this.addButton);
+         commonActions.click(this.saveButton);
+     }
+ }
+
+module.exports = EditTerritoryTypesViewForm;
