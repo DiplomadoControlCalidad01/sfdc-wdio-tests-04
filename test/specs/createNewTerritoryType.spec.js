@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 const {credentials} = require('../../environment');
 const Login = require('../pages/login.po');
 
-describe('New Type of Territory feature', () => {
+describe('New Territory Type is created', () => {
 
     beforeEach(() => {
 
