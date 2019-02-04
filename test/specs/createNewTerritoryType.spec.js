@@ -1,8 +1,6 @@
 const expect = require('chai').expect;
 const {credentials} = require('../../environment');
 const Login = require('../pages/login.po');
-//const TerritoryTypeDetails = require('../pages/territoryTypeDetails.po');
-
 
 describe('New Territory Type is created', () => {
 
@@ -15,6 +13,7 @@ describe('New Territory Type is created', () => {
         'description' : 'Description 1',
         'priority' : '1'
     };
+
     beforeEach(() => {
         configurationTree = Login.loginAs(credentials.sysadmin.username, credentials.sysadmin.password);
         configurationTree.setSearchTextField("Tipos de territorios");
