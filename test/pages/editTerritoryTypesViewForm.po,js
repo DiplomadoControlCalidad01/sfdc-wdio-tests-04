@@ -4,14 +4,22 @@ const commonActions = require('../core/CommonActions');
  class EditTerritoryTypesViewForm {
 
      constructor() {
-         this.territoryTypeNameOption = 'td[class="selectCell"] #colselector_select_0 option[value="DeveloperName"]'; //locator of Territory Type Name option in the Available fields panel.
+         this.territoryTypeNameAvailableOption = 'td[class="selectCell"] #colselector_select_0 option[value="DeveloperName"]'; //locator of Territory Type Name option in the Available fields panel.
          this.addButton = '#colselector .layout td[class="zen-phs buttonCell"] div[class="zen-mbs text"] .rightArrowIcon'; //locator related to button for the adding a column  to the Territory Types list view.
          this.saveButton = '.pbHeader .pbButtonb input[class="btn primary"][name="save"]'; //The save button in the top menu related to save changes in the Territory Types list view.
+         this.territoryTypeNameSelectedOption = 'td[class="selectCell"] #colselector_select_1 option[value="DeveloperName"]'; // locator of Territory Type Name option in the Selected fields panel.
+         this.removeButton = '#colselector .layout td[class="zen-phs buttonCell"] .text .leftArrowIcon'; //locator related to button for the deleting a column from the Territory Types list view.
      }
 
      addTerritoryTypeNameColumnToListView() {
-         commonActions.click(this.territoryTypeNameOption);
+         commonActions.click(this.territoryTypeNameAvailableOption);
          commonActions.click(this.addButton);
+         commonActions.click(this.saveButton);
+     }
+
+     removeTerritoryTypeNameColumnToListView() {
+         commonActions.click(this.territoryTypeNameSelectedOption);
+         commonActions.click(this.removeButton);
          commonActions.click(this.saveButton);
      }
  }
