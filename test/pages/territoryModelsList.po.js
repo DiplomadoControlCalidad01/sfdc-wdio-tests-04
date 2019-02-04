@@ -1,5 +1,6 @@
 const  commonActions = require('../core/CommonActions');
 const NewTerritoryModelForm = require('./newTerritoryModelForm.po');
+const TerritoryModelDetails = require('./territoryModelDetails.po');
 
 class TerritoryModelsList {
 
@@ -16,6 +17,12 @@ class TerritoryModelsList {
     isExistingTerritoryModel(territoryModel) {
         commonActions.switchToFrame('//iframe[contains(@id, "vfFrameId_")]');
         return browser.isExisting('//a[contains(text(), "' + territoryModel + '")]');
+    }
+
+    accessToTerritoryModelDetails(territoryModelLabel) {
+        //commonActions.switchToFrame('//iframe[contains(@id, "vfFrameId_")]');
+        commonActions.click('//a[contains(text(), "' + territoryModelLabel + '")]');
+        return new TerritoryModelDetails;
     }
 }
 

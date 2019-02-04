@@ -7,6 +7,7 @@ describe('New Territory Model is created', () => {
 
     let configurationTree;
     let territoryModelsList;
+    let TerritoryModelDetails;
     let newTerritoryModelData = {
         'label' : 'NewLabel1',
         'name' : 'NewTerritoryModel1',
@@ -20,18 +21,23 @@ describe('New Territory Model is created', () => {
     });
 
     it('Create New Model of Territory', () => {
-
         let newTerritoryModelForm = territoryModelsList.clickNewTerritoryModelButton();
         newTerritoryModelForm.fillOutTheNewTerritoryModelForm(newTerritoryModelData);
         newTerritoryModelForm.clickSaveButton();
         configurationTree.clickTerritoryModelsTreeBranch();
+//        expect(territoryModelsList.isExistingTerritoryModel(newTerritoryModelData.label)).to.be.true;
+        configurationTree.setSearchTextField("Modelos territoriales");
+        territoryModelsList = configurationTree.clickTerritoryModelsTreeBranch();
         expect(territoryModelsList.isExistingTerritoryModel(newTerritoryModelData.label)).to.be.true;
+        TerritoryModelDetails = territoryModelsList.accessToTerritoryModelDetails(newTerritoryModelData.label);
+        TerritoryModelDetails.deleteTerritoryModel();
     });
 
     afterEach( () => {
         //TerritoryTypeDetails = territoryTypesList.accessToTerritoryTypeDetails(newTerritoryTypeData.label);
-        browser.pause(2000)
+//        browser.pause(2000)
         //TerritoryTypeDetails.deleteTerritoryType();
+        browser.pause(2000)
     });
 });
 
