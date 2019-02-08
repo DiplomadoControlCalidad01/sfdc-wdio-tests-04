@@ -24,23 +24,15 @@ describe('New Territory Model is created', () => {
         let newTerritoryModelForm = territoryModelsList.clickNewTerritoryModelButton();
         newTerritoryModelForm.fillOutTheNewTerritoryModelForm(newTerritoryModelData);
         newTerritoryModelForm.clickSaveButton();
+
         configurationTree.clickTerritoryModelsTreeBranch();
-//        expect(territoryModelsList.isExistingTerritoryModel(newTerritoryModelData.label)).to.be.true;
         configurationTree.setSearchTextField("Modelos territoriales");
         territoryModelsList = configurationTree.clickTerritoryModelsTreeBranch();
         expect(territoryModelsList.isExistingTerritoryModel(newTerritoryModelData.label)).to.be.true;
-        TerritoryModelDetails = territoryModelsList.accessToTerritoryModelDetails(newTerritoryModelData.label);
-        TerritoryModelDetails.deleteTerritoryModel();
     });
 
     afterEach( () => {
-        //TerritoryTypeDetails = territoryTypesList.accessToTerritoryTypeDetails(newTerritoryTypeData.label);
-//        browser.pause(2000)
-        //TerritoryTypeDetails.deleteTerritoryType();
-        browser.pause(2000)
+        TerritoryModelDetails = territoryModelsList.accessToTerritoryModelDetails(newTerritoryModelData.label);
+        TerritoryModelDetails.deleteTerritoryModel();
     });
 });
-
-
-
-//browser.alertDismiss(); alertAccept to accept the current alert for deleting.
