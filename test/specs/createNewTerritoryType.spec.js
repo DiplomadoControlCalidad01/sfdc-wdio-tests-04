@@ -34,11 +34,6 @@ describe('New Territory Type is created', () => {
 
         territoryTypesList.removeColumnOfTerritoryTypeList();
         TerritoryTypeDetails = territoryTypesList.accessToTerritoryTypeDetails(newTerritoryTypeData.label);
-        browser.pause(2000)
         TerritoryTypeDetails.deleteTerritoryType();
     });
 });
-
-
-
-//browser.alertDismiss(); alertAccept to accept the current alert for deleting.
