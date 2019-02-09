@@ -30,6 +30,7 @@ class TerritoryTypesList {
     }
 
     removeColumnOfTerritoryTypeList() {
+        commonActions.switchToFrame('//iframe[contains(@id, "vfFrameId_")]');
         commonActions.click(this.modifyTerritoryTypesListViewLink);
         commonActions.switchToFrame('//iframe[contains(@id, "vfFrameId_")]');
         this.EditTerritoryTypesViewForm.removeTerritoryTypeNameColumnToListView();
